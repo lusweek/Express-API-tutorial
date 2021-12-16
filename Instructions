@@ -1,0 +1,71 @@
+Dessa behöver du instalera via terminalen
+    npm install cors express mongoose
+
+nodemon behöver vara en devDependencie så du skriver detta: 
+    npm install -D mongoose
+
+I packege.json behöver detta stå under scripts: 
+"scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+
+-----------------------------------------------------
+
+Skapa en databas med mongoDB
+Gå till https://www.mongodb.com/
+logga in 
+New project
+Ender name, next
+create project 
+
+build a databace 
+select free 
+choose closest area, add cluser name, create cluser
+click on the small blue text (you'r cluster name) just above "Security Quickstart"
+You'r cluster is being created.
+
+Go to databace access
+add new databace user
+Choose Password, add name and password, COPY password and save somewhare, you will need it later, add user.
+
+Go to network access
+Choose "Allow Access from Anywhere", conferm
+
+Go to databaces 
+click on "Conect", conect you'r application
+COPY the link and save it somewhare. Then replace <password> with you'r saved password.
+close 
+
+Add key to you'r code!
+Done!
+
+----------------------------------------------------
+
+USING POSTMAN
+
+Go to https://www.postman.com/ and create an account
+Download the postman application at https://www.postman.com/downloads/ 
+Open app
+Just under reports, click the + (Not the + withch creates a new collectoin)
+At "enter request URL" write "localhost:5000/api" + you'r relevant endpoint you enterd in API.js.
+
+TO GET:
+GET should be chosen
+set endpoint as /newpost (localhost:5000/api/getposts)
+Click send
+
+TO POST:
+click the + to create a nwe tab.
+Select POST
+change the endpoint to /newpost (name on you'r endpoint)
+Go to body, select raw and JSON
+then write the body. ex:
+{
+    "fname": "Adam",
+    "email": "Adams-email",
+    "content": "Trevligt att träffas!"
+}
+
+Click send
+
+------------------------------------------------------

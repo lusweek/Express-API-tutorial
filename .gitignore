@@ -1,0 +1,8 @@
+Here we add the files we dont want to upload to git. This is partly cuse we dont want t oupload 
+sencetive data lite our password in the databace key. 
+
+node_modules
+
+package-lock.json
+
+.env
